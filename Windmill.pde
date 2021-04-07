@@ -14,11 +14,11 @@ class Windmill {
   void move() {
     pushMatrix();
     translate(xpos, ypos);
-    triangle(0, 0, -10, 150, 10, 150);
+    triangle(0, 0, -5, 75, 5, 75);
     rotate(radians(frameCount * speed % 360));
-    triangle(0, 0, 100, 0, 25, -5);
-    triangle(0, 0, -55, -85, -10, -5);
-    triangle(0, 0, -55, 85, 0, 10);
+    triangle(0, 0, 50, 0, 10, -5);
+    triangle(0, 0, -25, 43.3, -0.7, 11.21);
+    triangle(0, 0, -25, -43.3, -9.36, -6.21);
     popMatrix();
   }
 
