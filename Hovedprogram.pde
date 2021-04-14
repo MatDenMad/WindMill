@@ -1,8 +1,13 @@
 import controlP5.*;
 //vi importerer et "library", og stjernen betyder at det er hele bilbiotektet jeg medtager.
 ControlP5 cp5;
+<<<<<<< Updated upstream
 //jeg deklererer min variabel (cp5) af datatypen "ControlP5"
 PImage img;
+=======
+
+//hej hej 2
+>>>>>>> Stashed changes
 
 void setup() {
   cp5=new ControlP5(this);
