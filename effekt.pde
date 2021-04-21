@@ -35,7 +35,7 @@ void drawEffektmaaler() {
   
   fill(51);
   rect(375, 450, 250, 100);
-  noFill();
+  fill(255,150); //fill(rgb, grad af transparans)
   rect(50,25,267,100);
   
   noFill();

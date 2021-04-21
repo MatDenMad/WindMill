@@ -30,7 +30,7 @@ boolean isBoksOpen (){
 void drawFaktaBoks(){
 
 if (open){
-noFill();
+fill(255,150);
 rect(xPos,yPos,267,200);
 rect(xPos,yPos,width,height);
 
@@ -51,8 +51,7 @@ text("* Antal døgn med hård vind, 10,8 - 13,8 m/s, er over 170 døgn ved Skage
   
 
 } else {
- 
- noFill();
+ fill(255,150);
  rect(xPos,yPos,width,height);
  textSize(20);
  fill(0);
