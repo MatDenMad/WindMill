@@ -1,5 +1,4 @@
 class sky {
-
   float ypos = 100;
   float xpos = -100;  
   float speed;
