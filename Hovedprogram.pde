@@ -4,6 +4,8 @@ ControlP5 cp5;
 //jeg deklererer min variabel (cp5) af datatypen "ControlP5"
 PImage img;
 
+
+
 void setup() {
   cp5=new ControlP5(this);
   cp5.addSlider("vind").setPosition(870, 540).setRange(0, 25).setHeight(50);
@@ -32,6 +34,8 @@ sky sky2 = new sky(300, 100, speed);
 sky sky3 = new sky(550, 180, speed);
 sky sky4 = new sky(700, 70, speed);
 sky sky5 = new sky(900, 150, speed);
+
+faktaBoks B = new faktaBoks(false, 50,130);
 
 void draw() {
   background(img);
@@ -67,21 +71,26 @@ void draw() {
   sky3.displaySky();
   sky4.displaySky();
   sky5.displaySky();
+  
+  drawEffektmaaler();
+  effekt();
+  
+  B.drawFaktaBoks();
+  
 }
 
 void vind() { //Her skal Mathias lave funktionen for sammenhængen mellem vindstyrke(x) og rotation(y)
   vind = cp5.get(Slider.class, "vind").getValue();
-  vind = vind/5;
-  Mill1.setSpeed(vind);
-  Mill2.setSpeed(vind);
-  Mill3.setSpeed(vind);
-  Mill4.setSpeed(vind);
-  Mill5.setSpeed(vind);
-  sky1.setSpeed(vind);
-  sky2.setSpeed(vind);
-  sky3.setSpeed(vind);
-  sky4.setSpeed(vind);
-  sky5.setSpeed(vind);
+  Mill1.setSpeed(vind/5);
+  Mill2.setSpeed(vind/5);
+  Mill3.setSpeed(vind/5);
+  Mill4.setSpeed(vind/5);
+  Mill5.setSpeed(vind/5);
+  sky1.setSpeed(vind/5);
+  sky2.setSpeed(vind/5);
+  sky3.setSpeed(vind/5);
+  sky4.setSpeed(vind/5);
+  sky5.setSpeed(vind/5);
 }
 
 void up() {
@@ -96,4 +105,22 @@ void down() {
   if (millNumber <= 0) {
     millNumber = 0;
   }
+}
+
+void mouseClicked() {
+ 
+  
+if (B.isBoksClicked(mouseX, mouseY))
+  if (B.open) {
+  B.setBoks(false);
+  
+  } else {
+  B.setBoks(true);
+  
+  
+  }
+
+
+
+
 }
