@@ -15,6 +15,9 @@ void effekt() {
   } else if ((vind>19) && (vind<25)) { 
     kW = ((-5.93*vind) + 723.31);
   }
+    else if(vind>25){
+    kW = 0;
+  }
 }
 
 void drawEffektmaaler() {
@@ -34,14 +37,20 @@ void drawEffektmaaler() {
   String rkWhAAT = nfc(rkWhAA);
   
   fill(51);
-  rect(375, 450, 250, 100);
-  fill(255,150); //fill(rgb, grad af transparans)
-  rect(50,25,267,100);
+  rect(375, 500, 250, 100);
+  noFill();
+  rect(50,25,300,100); 
   
+  fill(245,245,220);
+  rect(322,95,10,10);
+  fill(245,0,0);
+  triangle(319,95,335,95,327,87);
+  fill(55);
+  rect(328,100,2,5);
   noFill();
 
   textSize(15);
-  fill(51);
+  fill(1);
   text("Årlig produktion af kWh",52,42);
   text("Antal huse det årligt kunne forsynes",52,100);
   text(rkWhAAT+" kWh",52,65);
@@ -50,10 +59,10 @@ void drawEffektmaaler() {
   
   noFill();
   fill(255);
-  text("Effet pr. vindmølle:", 435, 470);
-  text("Totale effekt for vindmøller:", 400, 510);
-  text(rkWT+"kW", 475, 490);
-  text(rkWTotalT+"kW", 475, 530);
+  text("Effet pr. vindmølle:", 435, 520);
+  text("Totale effekt for vindmøller:", 400, 560);
+  text(rkWT+"kW", 475, 540);
+  text(rkWTotalT+"kW", 475, 580);
   
   
   

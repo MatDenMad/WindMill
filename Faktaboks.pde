@@ -27,31 +27,37 @@ boolean isBoksOpen (){
 }
 
 
-void drawFaktaBoks(){
+void drawFaktaBoks(String t1, String t2, String t3, String t4, String t5, int w, int h){
 
 if (open){
-fill(255,150);
-rect(xPos,yPos,267,200);
+noFill();
+rect(xPos,yPos,w,h);
+
 rect(xPos,yPos,width,height);
 
+
 stroke(255,0,100);
-line(52,132,52+16,132+16);
-line(52+16,132,52,132+16);
+line(xPos+2,yPos+2,xPos+18,yPos+18);
+line(xPos+18,yPos+2,xPos+2,yPos+18);
 stroke(0,0,0);
+
+
 
 
 fill(0);
 textSize(17);
-text("Vindhastigheder i Danmark:",73,148);
+text(t1,73,148);
 textSize(14);
-text("* GNS. vindstyrke i DK er 5.8 m/s",52,170);
-text("* Skagen fyr, Gedser og Hvide Sande ligger omkring 7-7,8 m/s",52,180,265,200);
-text("* Antal døgn med hård vind, 10,8 - 13,8 m/s, er over 170 døgn ved Skagen, men kun 30 døgn inde i landet.",52,230,265,350);
+text(t2,52,170);
+text(t3,52,180,265,200);
+text(t4,52,230,265,300);
+text(t5,52,320,265,370);
 
   
 
 } else {
- fill(255,150);
+ 
+ noFill();
  rect(xPos,yPos,width,height);
  textSize(20);
  fill(0);
