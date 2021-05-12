@@ -39,35 +39,50 @@ lyn L = new lyn();
 lyn L2 = new lyn();
 lyn L3= new lyn();
 
-faktaBoks B1 = new faktaBoks(false, 50,130);
+faktaBoks B1 = new faktaBoks(false, 50, 130);
 
 void draw() {
   background(img);
   fill(205);
   if (millNumber == 1) {
     Mill1.move();
+    ledning1();
   }
   if (millNumber == 2) {
     Mill1.move();
+    ledning1();
     Mill2.move();
+    ledning2();
   }
   if (millNumber == 3) {
     Mill1.move();
+    ledning1();
     Mill2.move();
+    ledning2();
     Mill3.move();
+    ledning3();
   }
   if (millNumber == 4) {
     Mill1.move();
+    ledning1();
     Mill2.move();
+    ledning2();
     Mill3.move();
+    ledning3();
     Mill4.move();
+    ledning4();
   }
   if (millNumber == 5) {
     Mill1.move();
+    ledning1();
     Mill2.move();
+    ledning2();
     Mill3.move();
+    ledning3();
     Mill4.move();
+    ledning4();
     Mill5.move();
+    ledning5();
   }
 
   sky1.displaySky();
@@ -75,29 +90,30 @@ void draw() {
   sky3.displaySky();
   sky4.displaySky();
   sky5.displaySky();
-  
+
   drawEffektmaaler();
   effekt();
-  B1.drawFaktaBoks("Vindhastigheder i Danmark:","* GNS. vindstyrke i DK er 5.8 m/s.","* Skagen fyr, Gedser og Hvide Sande ligger omkring 7-7,8 m/s.","* Antal døgn med hård vind (10,8 - 13,8 m/s), er over 170 døgn ved Skagen, men kun 30 døgn inde i landet.","*Under orkanen i 2013, var vindstyrken 53,5 m/s.",267,230);
-  L.drawLyn(235,37,1);
-  L2.drawLyn(425,515,1);
-  L3.drawLyn(390,555,1);
-  
+  B1.drawFaktaBoks("Vindhastigheder i Danmark:", "* GNS. vindstyrke i DK er 5.8 m/s.", "* Skagen fyr, Gedser og Hvide Sande ligger omkring 7-7,8 m/s.", "* Antal døgn med hård vind (10,8 - 13,8 m/s), er over 170 døgn ved Skagen, men kun 30 døgn inde i landet.", "*Under orkanen i 2013, var vindstyrken 53,5 m/s.", 267, 230);
+  L.drawLyn(235, 37, 1);
+  L2.drawLyn(425, 515, 1);
+  L3.drawLyn(390, 555, 1);
+
   noStroke();
-  fill(0,255,0);
-  triangle(795,545,815,545,805,533);
-  rect(800,545,10,15);
-  fill(255,0,0); 
-  triangle(795,585,815,585,805,597);
-  rect(800,570,10,15);
+  fill(0, 255, 0);
+  triangle(795, 545, 815, 545, 805, 533);
+  rect(800, 545, 10, 15);
+  fill(255, 0, 0); 
+  triangle(795, 585, 815, 585, 805, 597);
+  rect(800, 570, 10, 15);
   noFill();
-  
+
   fill(1);
   textSize(16);
-  text("Reguler vindstyrken her:",870,465,100,100);
-  
- 
-  
+  text("Reguler vindstyrken her:", 870, 465, 100, 100);
+
+  storLedningHojre();
+  storLedningVenstre();
+  storLedningLodret();
 }
 
 void vind() { 
@@ -129,19 +145,12 @@ void fjern() {
 }
 
 void mouseClicked() {
- 
-  
-if (B1.isBoksClicked(mouseX, mouseY))
-  if (B1.open) {
-  B1.setBoks(false);
-  
-  } else {
-  B1.setBoks(true);
-  
-  
-  }
 
 
-
-
+  if (B1.isBoksClicked(mouseX, mouseY))
+    if (B1.open) {
+      B1.setBoks(false);
+    } else {
+      B1.setBoks(true);
+    }
 }
