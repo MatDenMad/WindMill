@@ -4,7 +4,7 @@ ControlP5 cp5;
 //jeg deklererer min variabel (cp5) af datatypen "ControlP5"
 PImage img;
 
-
+//MOIN
 
 void setup() {
   cp5=new ControlP5(this);
