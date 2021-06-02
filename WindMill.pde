@@ -27,6 +27,10 @@ Windmill Mill3 = new Windmill(750, 300, speed);
 Windmill Mill4 = new Windmill(825, 375, speed);
 Windmill Mill5 = new Windmill(900, 300, speed);
 
+Hus h = new Hus(150, 400);
+Hus h2 = new Hus(200, 400);
+Hus h3 = new Hus(250, 400);
+
 sky sky1 = new sky(50, 200, speed);
 sky sky2 = new sky(300, 100, speed);
 sky sky3 = new sky(550, 180, speed);
@@ -41,6 +45,11 @@ faktaBoks B1 = new faktaBoks(false, 50, 130);
 
 void draw() {
   background(img);
+  //tegner husene
+  h.drawHus();
+  h2.drawHus();
+  h3.drawHus();
+  
   fill(205);
   if (millNumber == 1) {
     Mill1.move();
