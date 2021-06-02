@@ -4,8 +4,6 @@ ControlP5 cp5;
 //jeg deklererer min variabel (cp5) af datatypen "ControlP5"
 PImage img;
 
-//MOIN
-
 void setup() {
   cp5=new ControlP5(this);
   cp5.addSlider("vind").setPosition(870, 540).setRange(0, 53.5).setHeight(50);
