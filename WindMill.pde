@@ -12,7 +12,7 @@ void setup() {
   img = loadImage("Baggrund.png");
   img.resize(1000, 600);
 }
-
+//MOIN
 void settings() {
   size(1000, 600);
 }
